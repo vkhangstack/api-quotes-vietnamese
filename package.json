@@ -15,6 +15,8 @@
     "mongoose": "^6.0.7"
   },
   "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^7.18.0",
     "nodemon": "^2.0.13"
   },
   "repository": {
@@ -30,5 +32,8 @@
   "bugs": {
     "url": "https://github.com/vkhangstack/api-quotes-vietnamese/issues"
   },
-  "homepage": "https://github.com/vkhangstack/api-quotes-vietnamese#readme"
+  "homepage": "https://github.com/vkhangstack/api-quotes-vietnamese#readme",
+  "engines": {
+    "node": "14.x"
+  }
 }
