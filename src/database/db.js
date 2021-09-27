@@ -10,7 +10,7 @@ module.exports = async () => {
     };
     await mongoose.connect(
       'mongodb://localhost/quotes-vietnamese',
-      connectionParams,
+      connectionParams
     );
     console.log('Connect to mongodb successfully');
   } catch (error) {
