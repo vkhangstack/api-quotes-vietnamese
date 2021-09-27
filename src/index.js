@@ -10,7 +10,7 @@ const author = require('./routes/authors');
 
 app.use(cors());
 app.use(express.json());
-app.use('/', author);
+app.use('/author', author);
 
 // eslint-disable-next-line no-undef
 const PORT = process.env.PORT;
