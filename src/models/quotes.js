@@ -1,6 +1,6 @@
-'use strict'
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+'use strict';
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const quotesSchema = new Schema(
   {
@@ -11,12 +11,12 @@ const quotesSchema = new Schema(
     author: {
       type: Object,
       required: true,
-      ref: 'author',
+      ref: 'Author',
     },
-    categories: {
+    tags: {
       type: Object,
       required: true,
-      ref: 'categories',
+      ref: 'Tags',
     },
     length: {
       type: Number,
@@ -24,5 +24,5 @@ const quotesSchema = new Schema(
     },
   },
   { timestamps: true }
-)
-module.exports = mongoose.model('quotes', quotesSchema)
+);
+module.exports = mongoose.model('Quotes', quotesSchema);

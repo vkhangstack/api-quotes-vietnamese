@@ -2,9 +2,11 @@
 
 const express = require('express');
 const router = express.Router();
-const addAuthor = require('../controller/authors/addAuthor');
-const getAuthorById = require('../controller/authors/getAuthorById');
-const getListAuthors = require('../controller/authors/getListAuthors');
+const {
+  getAuthorById,
+  getListAuthors,
+  addAuthor,
+} = require('../controller/authors/index');
 
 router.post('/', addAuthor);
 router.get('/:id', getAuthorById);

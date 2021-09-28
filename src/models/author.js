@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const authorSchema = new Schema(
   {
@@ -31,6 +31,6 @@ const authorSchema = new Schema(
     },
   },
   { timestamps: true }
-)
+);
 
-module.exports = mongoose.model('author', authorSchema)
+module.exports = mongoose.model('Author', authorSchema);

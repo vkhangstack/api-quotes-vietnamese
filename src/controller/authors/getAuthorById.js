@@ -2,17 +2,19 @@
 
 const Author = require('../../models/author');
 
-const createError = require('http-errors');
+const Error = require('throwable-http-errors');
 
 const getAuthorById = async (req, res) => {
   try {
-    let id = req.params.id;
-    const author = await Author.findById({ _id: id });
-    if (!author) return createError(404, 'Author not found');
+    let _id = req.params.id;
+    const author = await Author.findById({ _id });
 
-    res.send(author);
+    if (!author)
+      return res.send(new Error.NotFound(`No author with id #${_id}`));
+
+    return res.send(author);
   } catch (error) {
-    return createError(404, 'Bad request');
+    return res.send(new Error.BadRequest());
   }
 };
 
