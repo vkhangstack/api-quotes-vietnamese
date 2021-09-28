@@ -19,8 +19,9 @@ const getQuoteByAuthor = async (req, res) => {
       author: { _id: authorId._id, name: authorId.name },
     });
     if (!quote) return res.send(new Error.NotFound('Author not found'));
+    const data = quote[Math.floor(Math.random() * quote.length)];
+    if (!data) return res.send(new Error.RequestTimeout());
 
-    const data = quote[Math.floor(Math.random() * quote.length)]; // random a quote object of array
     return res.send(data);
   } catch (error) {
     return res.send(new Error.BadRequest());

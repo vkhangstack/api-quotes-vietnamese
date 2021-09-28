@@ -10,7 +10,9 @@ const tagsSchema = new Schema(
       required: true,
     },
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+  }
 );
 
 module.exports = mongoose.model('Tags', tagsSchema);

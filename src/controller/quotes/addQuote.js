@@ -1,4 +1,7 @@
 'use strict';
+/**
+ * Add single quote to list quotes
+ */
 
 const Error = require('throwable-http-errors');
 const Quotes = require('../../models/quotes');
