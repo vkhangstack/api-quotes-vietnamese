@@ -11,12 +11,12 @@ const quotesSchema = new Schema(
     author: {
       type: Object,
       required: true,
-      ref: 'Author',
+      ref: 'author',
     },
     tags: {
-      type: Object,
+      type: Array,
       required: true,
-      ref: 'Tags',
+      ref: 'tags',
     },
     length: {
       type: Number,
