@@ -9,7 +9,7 @@ const {
 } = require('../controller/authors/index');
 
 router.post('/', addAuthor);
-router.get('/author/:id', getAuthorById);
+router.get('/:id', getAuthorById);
 router.get('/', getListAuthors);
 
 module.exports = router;
