@@ -12,7 +12,7 @@ const Author = require('../../models/author');
 const getQuoteByAuthor = async (req, res) => {
   try {
     const { id } = req.params;
-    const authorId = await Author.findOne({ _id: id });
+    const authorId = await Author.findOne({ _id: { $eq: id } });
     if (!authorId) return res.send(new Error.NotFound('Author not found'));
 
     const quote = await Quotes.find({

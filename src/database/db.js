@@ -8,10 +8,7 @@ module.exports = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     };
-    await mongoose.connect(
-      'mongodb://localhost/quotes-vietnamese',
-      connectionParams
-    );
+    await mongoose.connect(process.env.DB_URL, connectionParams);
     console.log('Connect to mongodb successfully');
   } catch (error) {
     console.log('Could not connect to MongoDB');

@@ -6,8 +6,8 @@ const Error = require('throwable-http-errors');
 
 const getAuthorById = async (req, res) => {
   try {
-    let _id = req.params.id;
-    const author = await Author.findById({ _id });
+    let id = req.params.id;
+    const author = await Author.find({ _id: { $eq: id } });
 
     if (!author)
       return res.send(new Error.NotFound(`No author with id #${_id}`));
