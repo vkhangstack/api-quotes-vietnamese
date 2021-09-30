@@ -5,7 +5,7 @@
 const Error = require('throwable-http-errors');
 const Quotes = require('../../models/quotes');
 
-const getQuoteRandom = async (req, res) => {
+const getQuoteRandom = async (_req, res) => {
   try {
     const quotes = await Quotes.find();
     const data = quotes[Math.floor(Math.random() * quotes.length)]; // Return random object of array
