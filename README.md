@@ -1,5 +1,8 @@
 # api-quotes-vietnamese
 
+[![CodeFactor](https://www.codefactor.io/repository/github/vkhangstack/api-quotes-vietnamese/badge)](https://www.codefactor.io/repository/github/vkhangstack/api-quotes-vietnamese)
+[![DeepScan grade](https://deepscan.io/api/teams/15608/projects/18785/branches/469129/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=15608&pid=18785&bid=469129)
+
 Một server trả về các quotes theo random, author, categories, length,day,...
 dưới dạng json
 
